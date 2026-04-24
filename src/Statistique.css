@@ -1,0 +1,44 @@
+/* CONTENEUR DES LIGNES DE BUS */
+.lignes-container {
+  display: flex;
+  flex-wrap: wrap;              /* passe à la ligne si besoin */
+  gap: 15px;                    /* espace entre les blocs */
+  justify-content: center;     /* centre horizontalement */
+  padding: 20px;
+}
+
+/* BLOC D'UNE LIGNE */
+.ligne-bus {
+  background: white;
+  border-radius: 12px;
+  padding: 18px 25px;
+  width: 160px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+/* effet hover */
+.ligne-bus:hover {
+  transform: translateY(-4px);
+  cursor: pointer;
+}
+
+/* numéro de ligne */
+.ligne-numero {
+  font-size: 26px;
+  font-weight: bold;
+  color: #1f2d3d;
+}
+
+/* texte label */
+.ligne-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 5px;
+}
