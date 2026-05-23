@@ -1,6 +1,11 @@
 import "./Recherche.css";
 
 function Recherche({ valeur, onChange }) {
+
+    function handleEffacer() {
+        onChange("");
+    }
+
     return (
         <div className="recherche">
 
@@ -11,6 +16,13 @@ function Recherche({ valeur, onChange }) {
                 value={valeur}
                 onChange={(e) => onChange(e.target.value)}
             />
+
+            {/* Affiche le bouton "Effacer" uniquement si la valeur de recherche n'est pas vide *\/ */}
+            {valeur && (
+                <button className="btn-effacer" onClick={handleEffacer}>
+                    Effacer
+                </button>
+            )}
 
         </div>
     );
